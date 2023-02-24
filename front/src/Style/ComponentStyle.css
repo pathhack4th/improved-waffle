@@ -16,15 +16,43 @@
   }
 }
 
+.main-header {
+  position: sticky;
+  top: 0px;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  margin-right: 20px;
+  height: 80px;
+  padding-bottom: 60px;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+
+.logo-image {
+  width: 36px;
+  height: 36px;
+  background-image: url('/public/icons/logo.svg');
+}
+
 .state {
   position: absolute;
   font-family: 'NotoSerifKR';
   text-align: center;
-  font-size: 24pt;
+  font-size: 20pt;
+  z-index: 1;
+  background-color: #ffffff;
   user-select: none;
   animation: fade-in 2s;
-  top: 20px;
-  width: 100%;
+  top: 50px;
+  width: calc(100% - 10px);
   pointer-events: none;
 }
 
@@ -34,16 +62,64 @@
 
 .title {
   font-family: 'NotoSerifKR';
+  font-weight: bold;
+  font-size: 18pt;
   text-align: center;
   user-select: none;
-  width: 100%;
+}
+
+.analysis-state {
+  font-family: 'NotoSerifKR';
+  text-align: center;
+  user-select: none;
+  margin-top: 30vh;
 }
 
 .header {
+  position: sticky;
+  top: 0px;
+  background-color: #ffffff;
+  z-index: 1;
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin-right: 42px;
+  justify-content: space-between;
+  margin-right: 20px;
+  height: 80px;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0px;
+  background-color: #ffffff;
+  z-index: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 20px;
+  width: 100%;
+  height: 40px;
+}
+
+.team-logo {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.team-logo-image {
+  width: 36px;
+  height: 36px;
+  background-image: url('/public/icons/team_logo.svg');
+}
+
+.team-name {
+  font-family: 'ShantellSans';
+  font-size: 14pt;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #751313;
+  margin-left: 6px;
 }
 
 .button-power {
@@ -54,8 +130,6 @@
   background-color: #d3d3d3;
   width: 78px;
   height: 32px;
-  margin-top: 10px;
-  margin-bottom: 80px;
   margin-left: 10px;
   user-select: none;
 }
@@ -102,7 +176,8 @@
   width: 32px;
   height: 32px;
   background-image: url('/public/icons/back.svg');
-  margin-left: 10px;
+  margin-left: 20px;
+  margin-right: 4px;
 }
 
 .scent-list {
@@ -126,9 +201,13 @@
   }
 }
 
-@media only screen and (min-width: 480px) and (max-width: 900px) {
+@media only screen and (min-width: 480px) and (max-width: 899px) {
   .menu-list {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .menu-01 {
+    grid-column-end: div 3;
   }
 
   .scent-list {
@@ -138,7 +217,7 @@
 
 @media only screen and (min-width: 900px) {
   .menu-list {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .scent-list {
@@ -217,6 +296,8 @@
   display: grid;
   justify-items: center;
   align-items: start;
+  padding-top: 20px;
+  padding-bottom: 40px;
 }
 
 .menu-card {

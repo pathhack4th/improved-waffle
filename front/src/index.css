@@ -23,3 +23,9 @@ code {
   font-weight: bold;
   src: url(../public/fonts/NotoSerifKR/NotoSerifKR-Bold.otf);
 }
+
+@font-face {
+  font-family: "ShantellSans";
+  font-weight: bold;
+  src: url(../public/fonts/ShantellSans/ShantellSans-Bold.ttf);
+}

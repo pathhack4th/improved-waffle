@@ -15,3 +15,15 @@ export const diffuserPowerState = atom({
   default: false,
   effects_UNSTABLE: [persistAtom]
 });
+
+export const spatialAnalysisState = atom({
+  key: 'spatialAnalysisState',
+  default: null,
+  effects_UNSTABLE: [persistAtom]
+});
+
+export const moodAnalysisState = atom({
+  key: 'moodAnalysisState',
+  default: null,
+  effects_UNSTABLE: [persistAtom]
+});

@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useRecoilState } from 'recoil';
-import { spatialAnalysisState } from '../store/atoms';
+import { moodAnalysisState } from '../store/atoms';
 import '../Style/ComponentStyle.css';
 
 
-export function SpatialAnalysisPage() {
-  const [spatialAnalysis, setSpatialAnalysis] = useRecoilState(spatialAnalysisState);
+export function MoodAnalysisPage() {
+  const [moodAnalysis, setMoodAnalysis] = useRecoilState(moodAnalysisState);
   const [dots, setDots] = useState('');
   const navigate = useNavigate();
   
@@ -29,13 +29,13 @@ export function SpatialAnalysisPage() {
     <div>
       <div className='header'>
         <div className='button-back' onClick={() => navigate(-1)} />
-        <h2 className='title'>공간 분석</h2>
+        <h2 className='title'>분위기 분석</h2>
         <div className='logo'>
           <div className='logo-image' />
         </div>
       </div>
       <div className='analysis-state'>
-        { spatialAnalysis ? '' : `공간 분석을 진행 중입니다${ dots }` }
+        { moodAnalysis ? '' : `분위기 분석을 진행 중입니다${ dots }` }
       </div>
     </div>
   );
