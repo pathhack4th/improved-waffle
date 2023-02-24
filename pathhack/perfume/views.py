@@ -7,6 +7,9 @@ from rest_framework import serializers
 import requests
 from datetime import datetime
 import serial
+import sys, os
+import struct
+# from yolact import eval
 
 rasberry = serial.Serial(port='COM5', baudrate=9600)
 
@@ -23,6 +26,36 @@ def make_perfume(request):
     # rasberry.readline()
     # print(get_weather())
     return Response(result)
+
+@api_view(['POST'])
+def get_huminity(request):
+    rasberry.write(b'h')
+    huminity = rasberry.readline().decode().replace('\r\n', '')+'0'
+    huminity = int(huminity)
+    incense = choice_huminity(huminity)
+    type = incense+'3'
+    rasberry.write(type.encode())
+    return Response(incense)
+
+def choice_huminity(h):
+    if h <=2:
+        return "a" # 우드
+    if h <=4:
+        return "c" #러브미
+    if h <=5:
+        return "d" # 공원
+    return "b" # 자몽
+# @api_view(['POST'])
+# def get_room(request):
+    
+#     distance = eval.start()
+
+@api_view(['POST'])
+def get_perfume(request):
+    type = request.data[0]+'3'
+    rasberry.write(type.encode())
+    return Response()
+
 
 def get_weather():
     serviceKey = 'j3o1HFXwsYUITKTWdi21rAmAR+V4/YNXF23UdfXH1QcEgvEGlO551SX6OwXD2Iu9nr3uerwlRmQ13EUkC3o6tw=='
