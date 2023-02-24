@@ -13,6 +13,7 @@ export function SelectMenuButton({ index, title, description, keyword }) {
   return (
     <div className='menu-card' onClick={() => handleClickMenu()}>
       <div className='menu-button'>
+        <div className='circle'></div>
         <img className='menu-image' src={`images/menu_${ index }.jpg`} alt={`menu-${ index }`}></img>
         <p className='menu-title'>{ title }</p>
       </div>

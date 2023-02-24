@@ -10,6 +10,7 @@ export function SelectScentButton({ index, name, description }) {
   return (
     <div className='scent-card' onClick={() => setScentId(parseInt(index))} >
       <div className='scent-button'>
+        <div className='circle'></div>
         <img className='scent-image' src={`images/${ index }.jpg`} alt={`scent-${ index }`}></img>
         <p className='scent-name'>{ name }</p>
       </div>
