@@ -1,0 +1,22 @@
+# 아래의 docker build에서 만들 docker/django 이미지를 만뜰 때 python3.6.7 이미지로부터 시작을 해라
+FROM python:3.6.7
+
+ENV PYTHONBUFFERED 1
+
+# RUN 명령어는 docker 컨테이너가 생성되면서 부터 바로 실행하라는 명렁어
+RUN apt-get -y update
+RUN apt-get -y install vim
+
+RUN mkdir /srv/back
+# 현재의 directory를 /srv/docker-django로 옮기기
+ADD . /srv/back
+
+# /srv/docker-django directory가 working directory가 됨
+WORKDIR /srv/back
+
+RUN pip install --upgrade pip
+RUN pip install -r requirements.txt
+
+# 8000번 포트가 뜰 수 있도록
+EXPOSE 8000
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
