@@ -5,5 +5,5 @@ app_name = 'perfume'
 
 urlpatterns = [
     # path('perfumes/list', views.incense_list),
-    path('make', views.make_perfume)
+    path('make', views.make_perfume),
 ]

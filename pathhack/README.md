@@ -2,6 +2,10 @@
 
 * `python -m venv venv`
 
+가상환경 활성화
+
+- `source venv/Scripts/activate`
+
 requirements.txt 를 이용하여 패키지를 설치
 
 * `pip install -r requirements.txt`
