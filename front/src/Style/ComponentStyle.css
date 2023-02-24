@@ -1,0 +1,199 @@
+.state {
+  font-family: 'NotoSerifKR';
+  text-align: center;
+  font-size: 24pt;
+  user-select: none;
+}
+
+.title {
+  font-family: 'NotoSerifKR';
+  text-align: center;
+  user-select: none;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 42px;
+}
+
+.button-power {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 16px;
+  background-color: #d3d3d3;
+  width: 78px;
+  height: 32px;
+  user-select: none;
+}
+
+.text-power-on {
+  font-weight: bold;
+  font-size: 20px;
+  color: #06a94d;
+  margin-bottom: 2px;
+  margin-left: 10px;
+}
+
+.text-power-off {
+  font-weight: bold;
+  font-size: 20px;
+  color: #f00e0e;
+  margin-bottom: 2px;
+  margin-left: 10px;
+}
+
+.circle-power-on {
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  background-color: #06a94d;
+  margin-right: 10px;
+}
+
+.circle-power-off {
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  background-color: #f00e0e;
+  margin-right: 10px;
+}
+
+.button-power-off {
+  font-weight: bold;
+  color: #f00e0e;
+}
+
+.button-back {
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  background-image: url('/public/icons/back.svg');
+  margin-left: 10px;
+}
+
+.scent-list {
+  display: grid;
+  justify-items: center;
+  align-items: start;
+}
+
+@media only screen and (min-width: 480px) and (max-width: 900px) {
+  .scent-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .scent-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.scent-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  font-family: 'NotoSerifKR';
+  margin: 10px;
+  user-select: none;
+}
+
+.scent-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scent-card:hover {
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-out;
+}
+
+.scent-card:hover .scent-image {
+  opacity: 0.8;
+  transition: all 0.3s ease-out;
+}
+
+.scent-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  pointer-events: none;
+  user-select: none;
+}
+
+.scent-name {
+  position: absolute;
+  font-size: 16pt;
+  font-weight: bold;
+  color: #ffffff;
+  user-select: none;
+}
+
+.scent-description {
+  font-size: 10pt;
+  user-select: none;
+}
+
+.menu-list {
+  display: grid;
+  justify-items: center;
+  align-items: start;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.menu-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  font-family: 'NotoSerifKR';
+  margin: 10px;
+  user-select: none;
+}
+
+.menu-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-card:hover {
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-out;
+}
+
+.menu-card:hover .menu-image {
+  opacity: 0.8;
+  transition: all 0.3s ease-out;
+}
+
+.menu-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  pointer-events: none;
+  user-select: none;
+}
+
+.menu-title {
+  position: absolute;
+  font-size: 16pt;
+  font-weight: bold;
+  color: #ffffff;
+  user-select: none;
+}
+
+.menu-description {
+  font-size: 10pt;
+  user-select: none;
+}
