@@ -6,6 +6,9 @@ from .serializers.incense import IncenseListSerializer
 from rest_framework import serializers
 import requests
 from datetime import datetime
+import serial
+
+rasberry = serial.Serial(port='COM5', baudrate=9600)
 
 @api_view(['POST'])
 def make_perfume(request):
@@ -15,6 +18,9 @@ def make_perfume(request):
     m4 = request.data.get('m4')
     m5 = request.data.get('m5')
     result = [m1, m2, m3, m4, m5]
+    rasberry.write('a')
+    # if rasberry.readable():
+    # rasberry.readline()
     # print(get_weather())
     return Response(result)
 
