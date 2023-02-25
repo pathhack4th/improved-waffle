@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useRecoilState } from 'recoil';
 import { moodAnalysisState } from '../store/atoms';
+import axios from 'axios';
 import '../Style/ComponentStyle.css';
 
 
@@ -11,6 +12,16 @@ export function MoodAnalysisPage() {
   const navigate = useNavigate();
   
   useEffect(() => {
+    axios({
+      method: "post",
+      url: "/api/huminity"
+    })
+    .then((response) => {
+      navigate('/');
+    })
+    .catch(error => {
+      console.log(error);
+    });
   }, []);
   
   useEffect(() => {

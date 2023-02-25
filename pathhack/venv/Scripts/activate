@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\DANI\test\pathhack\venv"
+VIRTUAL_ENV="C:\Users\pen24\Desktop\pathhack\improved-waffle\pathhack\venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

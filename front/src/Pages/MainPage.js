@@ -5,7 +5,7 @@ import { diffuserPowerState, scentIdState } from '../store/atoms';
 import '../Style/ComponentStyle.css';
 
 
-const scentNames = ['내가 만든 ', '베이', '밤부', '일랑일랑', '러브미', '자몽', '교보문고', '오드우드', '공원'];
+const scentNames = ['내가 만든 ', '오드우드', '자몽', '러브미', '공원', '밤부', '교보문고', '베이', '일랑일랑'];
 
 export function MainPage() {
   const [diffuserPower, setDiffuserPower] = useRecoilState(diffuserPowerState);

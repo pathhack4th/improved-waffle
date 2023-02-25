@@ -9,9 +9,10 @@ from datetime import datetime
 import serial
 import sys, os
 import struct
+import time
 # from yolact import eval
 
-rasberry = serial.Serial(port='COM5', baudrate=9600)
+rasberry = serial.Serial(port='COM3', baudrate=9600, writeTimeout=0)
 
 @api_view(['POST'])
 def make_perfume(request):
@@ -52,7 +53,7 @@ def choice_huminity(h):
 
 @api_view(['POST'])
 def get_perfume(request):
-    type = request.data[0]+'3'
+    type = request.data.get('key')+'3'
     rasberry.write(type.encode())
     return Response()
 

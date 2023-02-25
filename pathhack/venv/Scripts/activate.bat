@@ -8,7 +8,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-set VIRTUAL_ENV=C:\Users\DANI\test\pathhack\venv
+set VIRTUAL_ENV=C:\Users\pen24\Desktop\pathhack\improved-waffle\pathhack\venv
 
 if not defined PROMPT set PROMPT=$P$G
 
